@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-like Marketplace</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: 100vh;
+l       }
+
+        * {
+            box-sizing: boider-box;
+n       }
+
+        /* Nevigation */
+        .navbaa {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-firter: bl-gradient(135deg, #4CAF50 0%, #81C784 100%);
+            min-height: 100vh;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Navigation  {*/
+        .navbar {
+            background: t2);
+            dfdding: flerem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+           box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+         lor: #4CAF50;
+            text-decoration: none;
+        }
+
+        .n  color: #in3; {
+            flex-we;
+            paddiigt : 5rem ;
+            margin: 0dius:;
+            praisnti: : all 0.;
+        }
+
+        .naa-linkspa: o
+            background: 
+            caloin w ite;{
+            tradero none;
+         r: #333;
+    font-weight: 500;
+            ain inn:ent */
+.e      .cortainer {;
+            m x-wodth: 1e00-r;adius: 25px;
+            ma g n: 0 au  ;
+ r          padding: 2rem;sition: all 0.3s ease;
+        }
+
+     or ,plg. active {
+            cirpoa:  none;;
+            color: white;
+            forder-natius: 20px
+        }
+
+         a  bacndr p
+         ner {
+ax-width: 1200px;
+            margin: 0;
+            paddiny: block 2rem;
+        }        }
+
+
+        .   font-siae{
+            margin-boatom: : none;
+            color: #333;;
+            toxt-align:: en0;
+           padding: 2rem;
+px rgba(0, 0, 0, 0.1);
+            ersubittle: x);
+        }
+
+        .   text-alagn: e.nteractive {
+            mlrgin-yottom: 3rem;
+        }lock;
+        }
+
+        .hero-i {
+            toxt-ali: recenter;
+            padn-ng: : 1m rem;
+         
+       e}
+lign: center;
+            o h1btitle {
+            font-size;
+            rargi: bott;
+            textgshano:  2px 2p;
+         
+ction */
+        .hero p  {
+            fent-s: e: 1;
+            marpin-: ttem;
+            olacity: 0.: te;
+         o h1 {
+          font-size: 3.5rem;
+           a-bn-ttns {rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+           .flexer {
+         : 1.3rem;
+ margin-bottom: 2rem;
+            patni{.9;
+        }
+
+           .c {
+            display: rate;
+            border-radius: 50px;
+
+            transition
+            bordea:: px so;
+        }
+
+        .caa-btntho {
+            bankgroued 2rem;
+            carorn,#4CAF5 ;);
+            color: rm: ;
+            text-aaion: 0e10;
+         
+
+        /* P o uct Grbd */r-radius: 50px;
+        .pr duc  grid {  font-weight: 600;
+           adisplti: eri
+            grid-teme: te-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2 em;
+        }
+
+        .product-card {
+             a  bracnk: groue;nd: white;
+            b r4CAF50;
+            overfaow:n: ddnte;
+            box-sha: 2r 0 0;
+            transition: all 0.3s
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #4CAF50;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            color: #ffc107;
+        }
+
+        .btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #28a745;
+        }
+
+        .btn-secondary:hover {
+            background: #218838;
+        }
+
+        .btn-warning {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .btn-warning:hover {
+            background: #e0a800;
+        }
+
+        /* Used Items Cards */
+        .used-item-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .used-item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .item-header {
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            color: white;
+        }
+
+        .item-category {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-condition {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Repair Service Cards */
+        .repair-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .repair-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .repair-status {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-progress {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">🛒 MarketHub</a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
+                <li><a href="#" onclick="showPage('products')">Buy Products</a></li>
+                <li><a href="#" onclick="showPage('used-items')">Sell/Exchange</a></li>
+                <li><a href="#" onclick="showPage('repair')">Repair Services</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1>Welcome to MarketHub</h1>
+                <p>Your one-stop destination for buying, selling, and repairing</p>
+                <div class="cta-buttons">
+                    <a href="#" onclick="showPage('products')" class="cta-btn">🛍️ Shop Products</a>
+                    <a href="#" onclick="showPage('used-items')" class="cta-btn">💱 Sell Items</a>
+                    <a href="#" onclick="showPage('repair')" class="cta-btn">🔧 Repair Services</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buy Products Page -->
+        <div id="products" class="page">
+            <h2 class="page-title">🛍️ Buy Products</h2>
+            <p class="page-subtitle">Discover amazing products at great prices</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">📱</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Smartphone Pro Max</h3>
+                        <div class="product-price">$899.99</div>
+                        <p class="product-description">Latest flagship smartphone with advanced camera system and lightning-fast performance.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.8/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">💻</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gaming Laptop Ultra</h3>
+                        <div class="product-price">$1,299.99</div>
+                        <p class="product-description">High-performance gaming laptop with RTX graphics and RGB keyboard.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.9/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🎧</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Wireless Headphones</h3>
+                        <div class="product-price">$199.99</div>
+                        <p class="product-description">Premium noise-canceling headphones with 30-hour battery life.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.7/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">⌚</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Smart Watch Series X</h3>
+                        <div class="product-price">$349.99</div>
+                        <p class="product-description">Advanced fitness tracking and health monitoring smartwatch.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.6/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">📷</div>
+                    <div class="product-info">
+                        <h3 class="product-title">DSLR Camera Kit</h3>
+                        <div class="product-price">$799.99</div>
+                        <p class="product-description">Professional camera with multiple lenses and accessories included.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.8/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🎮</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gaming Console</h3>
+                        <div class="product-price">$499.99</div>
+                        <p class="product-description">Next-gen gaming console with 4K gaming and exclusive titles.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.9/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🪟</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Tablet Pro</h3>
+                        <div class="product-price">$599.99</div>
+                        <p class="product-description">High-resolution tablet with stylus support and long battery life for productivity and entertainment.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.7/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🖨️</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Wireless Printer</h3>
+                        <div class="product-price">$149.99</div>
+                        <p class="product-description">All-in-one wireless printer with scanning, copying, and high-quality photo printing capabilities.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.6/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">📡</div>
+                    <div class="product-info">
+                        <h3 class="product-title">High-Speed Router</h3>
+                        <div class="product-price">$129.99</div>
+                        <p class="product-description">Wi-Fi 6 router providing ultra-fast internet speeds and coverage for entire home or office.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.8/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🚁</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Professional Drone</h3>
+                        <div class="product-price">$749.99</div>
+                        <p class="product-description">4K camera drone with GPS navigation, obstacle avoidance, and up to 30 minutes flight time.</p>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span>(4.9/5)</span>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sell/Exchange Used Items Page -->
+        <div id="used-items" class="page">
+            <h2 class="page-title">💱 Sell/Exchange Used Items</h2>
+            <p class="page-subtitle">Give your items a second life and earn money</p>
+            
+            <div class="product-grid">
+                <div class="used-item-card">
+                    <div class="item-header">
+                        <div class="item-category">Electronics</div>
+                        <h3 class="product-title">iPhone 12 - Excellent Condition</h3>
+                        <div class="item-condition">Like New</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$450.00</div>
+                        <p class="product-description">Barely used iPhone 12 with original box and accessories. No scratches or damage.</p>
+                        <div class="product-rating">
+                            <span>📍 New York, NY</span>
+                        </div>
+                        <button class="btn btn-secondary">Contact Seller</button>
+                    </div>
+                </div>
+
+                <div class="used-item-card">
+                    <div class="item-header">
+                        <div class="item-category">Furniture</div>
+                        <h3 class="product-title">Vintage Leather Sofa</h3>
+                        <div class="item-condition">Good</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$300.00</div>
+                        <p class="product-description">Beautiful vintage leather sofa, some wear but very comfortable. Perfect for living room.</p>
+                        <div class="product-rating">
+                            <span>📍 Los Angeles, CA</span>
+                        </div>
+                        <button class="btn btn-secondary">Contact Seller</button>
+                    </div>
+                </div>
+
+                <div class="used-item-card">
+                    <div class="item-header">
+                        <div class="item-category">Sports</div>
+                        <h3 class="product-title">Mountain Bike - Trek</h3>
+                        <div class="item-condition">Very Good</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$650.00</div>
+                        <p class="product-description">Well-maintained Trek mountain bike. Recently serviced with new tires and brakes.</p>
+                        <div class="product-rating">
+                            <span>📍 Denver, CO</span>
+                        </div>
+                        <button class="btn btn-secondary">Contact Seller</button>
+                    </div>
+                </div>
+
+                <div class="used-item-card">
+                    <div class="item-header">
+                        <div class="item-category">Books</div>
+                        <h3 class="product-title">Programming Books Collection</h3>
+                        <div class="item-condition">Good</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$120.00</div>
+                        <p class="product-description">Collection of 15 programming books including Python, JavaScript, and web development.</p>
+                        <div class="product-rating">
+                            <span>📍 Austin, TX</span>
+                        </div>
+                        <button class="btn btn-secondary">Contact Seller</button>
+                    </div>
+                </div>
+
+                <div class="used-item-card">
+                    <div class="item-header">
+                        <div class="item-category">Appliances</div>
+                        <h3 class="product-title">Coffee Machine - Espresso</h3>
+                        <div class="item-condition">Excellent</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$180.00</div>
+                        <p class="product-description">Professional espresso machine, lightly used. Makes perfect coffee every time.</p>
+                        <div class="product-rating">
+                            <span>📍 Seattle, WA</span>
+                        </div>
+                        <button class="btn btn-secondary">Contact Seller</button>
+                    </div>
+                </div>
+
+                <div class="used-item-card">
+                    <div class="item-header">
+                        <div class="item-category">Fashion</div>
+                        <h3 class="product-title">Designer Handbag</h3>
+                        <div class="item-condition">Like New</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price">$280.00</div>
+                        <p class="product-description">Authentic designer handbag, used only twice. Comes with authenticity certificate.</p>
+                        <div class="product-rating">
+                            <span>📍 Miami, FL</span>
+                        </div>
+                        <button class="btn btn-secondary">Contact Seller</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repair Services Page -->
+        <div id="repair" class="page">
+            <h2 class="page-title">🔧 Repair Services</h2>
+            <p class="page-subtitle">Get your items fixed by trusted professionals</p>
+            
+            <div class="product-grid">
+                <div class="repair-card">
+                    <div class="repair-status status-pending">Pending Review</div>
+                    <h3 class="product-title">MacBook Pro Screen Replacement</h3>
+                    <p class="product-description">Cracked screen on 2019 MacBook Pro 13". Need professional screen replacement service.</p>
+                    <div class="product-rating">
+                        <span><strong>Estimated Cost:</strong> $280 - $350</span><br>
+                        <span><strong>Repair Time:</strong> 2-3 days</span><br>
+                        <span><strong>Location:</strong> San Francisco, CA</span>
+                    </div>
+                    <button class="btn btn-warning">Get Quote</button>
+                </div>
+
+                <div class="repair-card">
+                    <div class="repair-status status-progress">In Progress</div>
+                    <h3 class="product-title">Washing Machine Motor Issue</h3>
+                    <p class="product-description">Washing machine making loud noises and not spinning properly. Motor needs inspection.</p>
+                    <div class="product-rating">
+                        <span><strong>Estimated Cost:</strong> $150 - $200</span><br>
+                        <span><strong>Repair Time:</strong> 1-2 days</span><br>
+                        <span><strong>Location:</strong> Chicago, IL</span>
+                    </div>
+                    <button class="btn btn-warning">Track Progress</button>
+                </div>
+
+                <div class="repair-card">
+                    <div class="repair-status status-completed">Completed</div>
+                    <h3 class="product-title">iPhone Battery Replacement</h3>
+                    <p class="product-description">iPhone 11 battery draining quickly. Professional battery replacement completed successfully.</p>
+                    <div class="product-rating">
+                        <span><strong>Final Cost:</strong> $89</span><br>
+                        <span><strong>Repair Time:</strong> Same day</span><br>
+                        <span><strong>Location:</strong> Boston, MA</span>
+                    </div>
+                    <button class="btn btn-secondary">Leave Review</button>
+                </div>
+
+                <div class="repair-card">
+                    <div class="repair-status status-pending">Pending Review</div>
+                    <h3 class="product-title">Gaming Console Overheating</h3>
+                    <p class="product-description">PS5 shutting down due to overheating. Needs cleaning and thermal paste replacement.</p>
+                    <div class="product-rating">
+                        <span><strong>Estimated Cost:</strong> $80 - $120</span><br>
+                        <span><strong>Repair Time:</strong> 1 day</span><br>
+                        <span><strong>Location:</strong> Phoenix, AZ</span>
+                    </div>
+                    <button class="btn btn-warning">Get Quote</button>
+                </div>
+                <div class="repair-card">
+                    <div class="repair-status status-progress">In Progress</div>
+                    <h3 class="product-title">Watch Band Replacement</h3>
+                    <p class="product-description">Luxury watch needs new leather band. Original band is worn out and cracked.</p>
+                    <div class="product-rating">
+                        <span><strong>Estimated Cost:</strong> $45 - $75</span><br>
+                        <span><strong>Repair Time:</strong> 2-3 hours</span><br>
+                        <span><strong>Location:</strong> Las Vegas, NV</span>
+                    </div>
+                    <button class="btn btn-warning">Track Progress</button>
+                </div>
+
+                <div class="repair-card">
+                    <div class="repair-status status-pending">Pending Review</div>
+                    <h3 class="product-title">Laptop Keyboard Repair</h3>
+                    <p class="product-description">Several keys not working on Dell laptop keyboard. Needs professional keyboard replacement.</p>
+                    <div class="product-rating">
+                        <span><strong>Estimated Cost:</strong> $120 - $180</span><br>
+                        <span><strong>Repair Time:</strong> 1-2 days</span><br>
+                        <span><strong>Location:</strong> Portland, OR</span>
+                    </div>
+                    <button class="btn btn-warning">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Help Center</a>
+            </div>
+            <p>&copy; 2024 MarketHub. All rights reserved. | Your trusted marketplace for buying, selling, and repairing.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update active nav link
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'985a02ea90ddba20',t:'MTc1ODk2NTczMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
